@@ -1,0 +1,261 @@
+/* Genel stil ayarları */
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+    color: #5c2c6d;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    background: #ff6b81;
+    color: white;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+/* Ana içerik düzeni */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+#lesson-list, #lesson-content {
+    width: 45%;
+    margin: 10px;
+    padding: 20px;
+    background: #ffffffcc;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #ff6b81;
+    font-size: 2em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    margin: 5px 0;
+    background: #fad0c4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li:hover {
+    background: #ff6b81;
+    color: white;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: #ff6b81;
+    color: white;
+}
+
+/* Quiz bağlantı butonları */
+.quiz-link {
+    margin: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.quiz-link a {
+    text-decoration: none;
+    color: #ff6b81;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    border: 2px solid #ff6b81;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.quiz-link a:hover {
+    background: #ff6b81;
+    color: white;
+}
+
+/* Back to Lessons butonu */
+.back-to-lessons {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.back-to-lessons a {
+    text-decoration: none;
+    color: #ff6b81;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: 2px solid #ff6b81;
+    border-radius: 5px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.back-to-lessons a:hover {
+    background: #ff6b81;
+    color: white;
+}
+
+/* Çark bölümü */
+#wheel-section {
+    margin: 20px auto;
+    text-align: center;
+}
+
+#wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px solid #ff6b81;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 4s ease-out;
+}
+
+/* Çark segmentleri */
+.segment {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    text-align: center;
+}
+
+.segment:nth-child(1) {
+    background: #ff9a9e;
+    top: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transform: rotate(0deg);
+}
+
+.segment:nth-child(2) {
+    background: #e77ece;
+    top: 0;
+    right: 0;
+    transform-origin: bottom left;
+    transform: rotate(90deg);
+}
+
+.segment:nth-child(3) {
+    background: #ec22b6;
+    bottom: 0;
+    left: 0;
+    transform-origin: top right;
+    transform: rotate(180deg);
+}
+
+.segment:nth-child(4) {
+    background: #a18cd1;
+    bottom: 0;
+    right: 0;
+    transform-origin: top left;
+    transform: rotate(270deg);
+}
+
+
+/* Spin butonu */
+#spin-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background: #ff6b81;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#spin-button:hover {
+    background: #ff4e6a;
+}
+
+/* Quiz seçenekleri */
+#quiz-section {
+    margin-top: 20px;
+    display: none;
+}
+
+.quiz-option {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #ff6b81;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.quiz-option:hover {
+    background: #ff4e6a;
+}
+
+/* Yanıp sönme animasyonu */
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+#selected-person {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #ff6b81;
+    margin-top: 20px;
+    animation: blink 1s infinite alternate;
+}
+.gif-container {
+    width: 100px; /* Genişliği belirle */
+    height: 100px; /* Yüksekliği belirle */
+    margin: 20px auto; /* Ortalamak için margin auto */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Köşeleri yuvarlat */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+}
+
+.gif-container iframe {
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+.lesson-image {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+}

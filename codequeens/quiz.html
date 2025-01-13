@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quiz - Spin the Wheel 🌸</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>HTML Quiz Game 🎮</h1>
+        <p>Spin the wheel to choose who will answer the question!</p>
+    </header>
+
+    <main>
+        <!-- Wheel Section -->
+        <section id="wheel-section">
+            <div id="wheel">
+                <div class="segment">Limar</div>
+                <div class="segment">Luna</div>
+                <div class="segment">again </div>
+                <div class="segment">Lin</div>
+            </div>
+            
+            <button id="spin-button">Spin the Wheel 🎡</button>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz-section" style="display: none;">
+            <h2 id="selected-person">Person Selected</h2>
+            <p id="quiz-question">Question will appear here!</p>
+            <button id="option-1" class="quiz-option"></button>
+            <button id="option-2" class="quiz-option"></button>
+            <p id="quiz-feedback"></p>
+        </section>
+
+        
+
+        <!-- Back to Lessons Button -->
+        <div class="back-to-lessons">
+            <a href="index.html">⬅️ Back to Lessons</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Good luck Limar, Luna & Lin! 🌟</p>
+    </footer>
+
+    <script src="quiz.js"></script>
+    <script src="confetti-cursor.js"></script>
+
+</body>
+</html>

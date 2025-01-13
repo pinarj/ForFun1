@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tutorial</title>
+    <style>
+        /* Basit stil örneği */
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+            color: #5c2c6d;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        #lesson-container {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="lesson-container">
+        <h2 id="lesson-title">Lesson Title</h2>
+        <div id="lesson-text">Click on a lesson to see its content here!</div>
+    </div>
+
+    <!-- Code Editor Section -->
+    <section id="code-editor-section" style="padding: 20px; background: #fef5ff;">
+        <h2 style="color: #ff6b81; font-size: 2em;">Try Writing HTML Code Below! ✍️</h2>
+        
+        <!-- Code Editor Area -->
+        <textarea id="html-code" placeholder="Write your HTML code here..." 
+                  style="width: 100%; height: 150px; padding: 10px; border-radius: 10px; border: 1px solid #ff9a9e; font-family: monospace; font-size: 1em;"></textarea>
+        
+        <!-- Run Button -->
+        <button id="run-button" style="margin-top: 10px; padding: 10px 20px; background: #ff6b81; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Run Code 🚀
+        </button>
+        
+        <!-- Output Area -->
+        <h3 style="color: #ff6b81; margin-top: 20px;">Output:</h3>
+        <iframe id="output-frame" style="width: 100%; height: 200px; border: 1px solid #ff9a9e; border-radius: 10px;"></iframe>
+    </section>
+
+    <script>
+        // Select the Run button and the output iframe
+        const runButton = document.getElementById('run-button');
+        const outputFrame = document.getElementById('output-frame');
+
+        // Add event listener to the Run button
+        runButton.addEventListener('click', () => {
+            // Get the code from the textarea
+            const htmlCode = document.getElementById('html-code').value;
+            
+            // Write the code into the iframe
+            outputFrame.contentDocument.open();
+            outputFrame.contentDocument.write(htmlCode);
+            outputFrame.contentDocument.close();
+        });
+    </script>
+    <script src="confetti-cursor.js"></script>
+
+</body>
+</html>
